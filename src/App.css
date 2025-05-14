@@ -2,4 +2,36 @@
   padding: 20px;
   min-height: 100vh;
   background-color: #f5f8fa;
+  position: relative;
+}
+
+.github-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #24292e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.github-link:hover {
+  background-color: #1c2023;
+}
+
+@media (max-width: 640px) {
+  .github-link span {
+    display: none;
+  }
+  
+  .github-link {
+    padding: 8px;
+  }
 }
