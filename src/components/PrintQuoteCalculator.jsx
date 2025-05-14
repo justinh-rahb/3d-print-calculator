@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calculator, Printer, DollarSign, Clock, Scale, Package, Settings, Download } from 'lucide-react';
 
 // This is the main component file that should be saved as src/components/PrintQuoteCalculator.jsx
@@ -31,9 +31,19 @@ export default function PrintQuoteCalculator() {
   // Calculate quote whenever inputs change
   useEffect(() => {
     calculateQuote();
-  }, [calculateQuote]);
+  }, [
+    materialCost, 
+    materialUse, 
+    unitsPerBatch, 
+    timePerBatch, 
+    operatorTime,
+    operatorRate,
+    machineDepreciation,
+    totalUnits,
+    markup
+  ]);
 
-  const calculateQuote = useCallback(() => {
+  const calculateQuote = () => {
     // Calculate total batches needed (rounded up)
     const totalBatches = Math.ceil(totalUnits / unitsPerBatch);
     
@@ -60,17 +70,7 @@ export default function PrintQuoteCalculator() {
       totalBatches,
       totalPrintTime
     });
-  }, [
-    materialCost,
-    materialUse,
-    unitsPerBatch,
-    timePerBatch,
-    operatorTime,
-    operatorRate,
-    machineDepreciation,
-    totalUnits,
-    markup
-  ]);
+  };
 
   // Format currency
   const formatCurrency = (value) => {
