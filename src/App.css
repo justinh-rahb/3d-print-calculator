@@ -1,22 +1,61 @@
 .App {
   padding: 20px;
   min-height: 100vh;
-  background-color: #f5f8fa;
+  background-color: var(--bg-color);
   position: relative;
+  transition: background-color 0.3s ease;
+}
+
+:root {
+  --bg-color: #f5f8fa;
+  --text-color: #333;
+  --card-bg: #fff;
+  --card-bg-alt: #eff6ff;
+  --card-bg-highlight: #2563eb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: #d1d5db;
+  --icon-color: #6e7781;
+  --icon-hover: #24292e;
+}
+
+body.dark-mode {
+  --bg-color: #121826;
+  --text-color: #e2e8f0;
+  --card-bg: #1e293b;
+  --card-bg-alt: #162033;
+  --card-bg-highlight: #3b82f6;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --border-color: #374151;
+  --icon-color: #9ca3af;
+  --icon-hover: #e2e8f0;
+}
+
+body {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  background-color: var(--bg-color);
 }
 
 .header-container {
   display: flex;
   justify-content: flex-end;
+  gap: 15px;
   margin-bottom: 10px;
   padding-right: 10px;
 }
 
-.github-link {
-  color: #6e7781;
+.github-link, .theme-toggle {
+  color: var(--icon-color);
   transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.github-link:hover {
-  color: #24292e;
+.github-link:hover, .theme-toggle:hover {
+  color: var(--icon-hover);
 }
