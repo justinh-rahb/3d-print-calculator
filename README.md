@@ -2,6 +2,8 @@
 
 A sleek, professional web app for creating detailed quotes for 3D printing jobs. Designed to simplify and standardize your quoting process, this tool calculates pricing based on real-world variables—material usage, machine wear, labor costs, and your preferred markup.
 
+![Screenshot](assets/screenshot.png)
+
 ## ✨ Key Features
 
 * **Intuitive Interface** — Clean, real-time UI for seamless quote creation
