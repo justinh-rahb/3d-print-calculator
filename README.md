@@ -32,7 +32,7 @@ A sleek, professional web app for creating detailed quotes for 3D printing jobs.
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/your-username/3d-print-calculator.git
+   git clone https://github.com/justinh-rahb/3d-print-calculator.git
    cd 3d-print-calculator
    ```
 
