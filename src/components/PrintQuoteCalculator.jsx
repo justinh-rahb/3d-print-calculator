@@ -3,7 +3,7 @@ import { Calculator, Printer, DollarSign, Clock, Scale, Package, Settings, Downl
 
 // This is the main component file that should be saved as src/components/PrintQuoteCalculator.jsx
 
-export default function PrintQuoteCalculator() {
+export default function PrintQuoteCalculator({ darkMode }) {
   // State for input values
   const [materialCost, setMaterialCost] = useState(30);
   const [materialUse, setMaterialUse] = useState(0.1);
@@ -42,6 +42,23 @@ export default function PrintQuoteCalculator() {
     totalUnits,
     markup
   ]);
+
+  // Add event listener for dark mode changes
+  useEffect(() => {
+    // Add event listener for dark mode changes
+    const handleDarkModeChange = () => {
+      // This will force a recalculation of the formatCurrency function
+      // when dark mode is toggled to ensure proper display
+      setResults({...results});
+    };
+    
+    document.body.addEventListener('darkModeChange', handleDarkModeChange);
+    
+    // Clean up
+    return () => {
+      document.body.removeEventListener('darkModeChange', handleDarkModeChange);
+    };
+  }, [results]);
 
   const calculateQuote = () => {
     // Calculate total batches needed (rounded up)

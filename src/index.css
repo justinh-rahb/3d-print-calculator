@@ -1,3 +1,4 @@
+/* We need to update the index.css to include CSS variable references for dark mode */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -12,8 +13,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f8fa;
-  color: #333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Add Tailwind-like utility classes */
@@ -154,19 +156,19 @@ body {
 }
 
 .text-gray-500 {
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .text-gray-600 {
-  color: #4b5563;
+  color: var(--text-tertiary);
 }
 
 .text-gray-700 {
-  color: #374151;
+  color: var(--text-color);
 }
 
 .text-gray-800 {
-  color: #1f2937;
+  color: var(--text-color);
 }
 
 .text-blue-100 {
@@ -174,27 +176,31 @@ body {
 }
 
 .text-blue-600 {
-  color: #2563eb;
+  color: var(--highlight-color);
 }
 
 .bg-white {
-  background-color: #fff;
+  background-color: var(--card-bg);
 }
 
 .bg-gray-50 {
-  background-color: #f9fafb;
+  background-color: var(--card-bg-alt);
 }
 
 .bg-blue-50 {
-  background-color: #eff6ff;
+  background-color: var(--card-bg-alt);
 }
 
 .bg-blue-600 {
-  background-color: #2563eb;
+  background-color: var(--card-bg-highlight);
 }
 
 .hover\:bg-blue-700:hover {
-  background-color: #1d4ed8;
+  background-color: var(--card-bg-highlight-hover, #1d4ed8);
+}
+
+body.dark-mode .hover\:bg-blue-700:hover {
+  background-color: #2d4ed8;
 }
 
 .rounded {
@@ -218,15 +224,15 @@ body {
 }
 
 .border-gray-300 {
-  border-color: #d1d5db;
+  border-color: var(--border-color);
 }
 
 .shadow {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px 0 var(--shadow-color), 0 1px 2px 0 var(--shadow-color);
 }
 
 .shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
 }
 
 .focus\:outline-none:focus {
@@ -300,6 +306,9 @@ button:focus {
 /* Styles for input fields */
 input[type="number"] {
   appearance: textfield;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
