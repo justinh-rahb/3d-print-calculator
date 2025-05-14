@@ -1,91 +1,100 @@
-# 3D Print Job Quote Calculator
+# 🧮 3D Print Job Quote Calculator
 
-A professional, interactive web application for calculating and generating quotes for 3D printing services. This tool helps you provide accurate pricing for customers by factoring in material costs, operator time, machine depreciation, and your desired markup.
+A sleek, professional web app for creating detailed quotes for 3D printing jobs. Designed to simplify and standardize your quoting process, this tool calculates pricing based on real-world variables—material usage, machine wear, labor costs, and your preferred markup.
 
-## Features
+## ✨ Key Features
 
-- **User-friendly interface** with real-time calculations
-- **Comprehensive cost breakdown** including:
-  - Material costs
-  - Operator time
-  - Machine depreciation
-- **Automatic calculations** for:
-  - Total batches required
-  - Total print time
-  - Cost per unit
-- **Professional quote generation** with downloadable text file
-- **Mobile-responsive design** works on all devices
+* **Intuitive Interface** — Clean, real-time UI for seamless quote creation
+* **Detailed Cost Breakdown** — Includes:
 
-## Getting Started
+  * Material costs
+  * Operator labor
+  * Machine depreciation
+* **Automated Calculations** — Instantly computes:
 
-### Prerequisites
+  * Number of batches required
+  * Total print time
+  * Cost per unit and per batch
+* **Quote Export** — Download professional, ready-to-share quote files in plain text format
+* **Mobile-Friendly** — Responsive design works across phones, tablets, and desktops
 
-- Node.js (v14 or higher)
-- npm or yarn
+## 🚀 Getting Started
 
-### Installation
+### Requirements
 
-1. Clone the repository
-```bash
-git clone https://github.com/your-username/3d-print-calculator.git
-cd 3d-print-calculator
-```
+* Node.js v14+
+* npm or yarn
 
-2. Install dependencies
-```bash
-npm install
-```
+### Installation Steps
 
-3. Start development server
-```bash
-npm start
-```
+1. **Clone the repo**
 
-The application will open in your browser at http://localhost:3000
+   ```bash
+   git clone https://github.com/your-username/3d-print-calculator.git
+   cd 3d-print-calculator
+   ```
 
-## Usage
+2. **Install dependencies**
 
-1. Enter your pricing parameters:
-   - Material cost per kg
-   - Material use per unit (kg)
-   - Units per batch
-   - Time per batch (hours)
-   - Operator time per batch (hours)
-   - Operator hourly rate
-   - Machine depreciation per hour
-   - Total units required
-   - Markup percentage
+   ```bash
+   npm install
+   ```
 
-2. View the calculated results in real-time
-3. Download a formatted quote using the "Download Quote" button
+3. **Run the development server**
 
-## Customization
+   ```bash
+   npm start
+   ```
 
-You can customize the default values by editing the initial state values in the `PrintQuoteCalculator.jsx` file:
+4. Open your browser at [http://localhost:3000](http://localhost:3000)
+
+## 🛠️ How to Use
+
+1. Input your parameters:
+
+   * Material cost per kg
+   * Material used per unit (kg)
+   * Units per batch
+   * Print time per batch (hrs)
+   * Operator time per batch (hrs)
+   * Operator hourly rate
+   * Machine depreciation per hour
+   * Total units to be printed
+   * Markup percentage
+
+2. View pricing updates in real time
+
+3. Download a professional quote with a single click
+
+## 🔧 Customization
+
+To modify default values, update the `useState` hooks in `PrintQuoteCalculator.jsx`:
 
 ```javascript
-const [materialCost, setMaterialCost] = useState(30); // Default material cost
-const [operatorRate, setOperatorRate] = useState(50); // Default operator rate
-// etc.
+const [materialCost, setMaterialCost] = useState(30);      // Default cost per kg
+const [operatorRate, setOperatorRate] = useState(50);      // Default labor rate
+// ...and more
 ```
 
-## Deployment
+## 🌍 Deployment Options
 
-This application can be deployed to any static site hosting service including:
-- GitHub Pages
-- Vercel
-- Netlify
-- Coolify (self-hosted)
+Easily deploy the app to any static hosting provider:
 
-## Contributing
+* GitHub Pages
+* Vercel
+* Netlify
+* Coolify (self-hosted)
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## 🤝 Contributing
 
-## License
+Pull requests are welcome! If you'd like to contribute, please fork the repo and submit a PR.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 🙌 Acknowledgments
 
-## Acknowledgments
+* Built with **React**
+* Icon set powered by **Lucide React**
+* Styled using lightweight, **vanilla CSS** for broad compatibility
 
-- Built with React and Lucide React icons
-- Styled with plain CSS for maximum compatibility
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for full details.
