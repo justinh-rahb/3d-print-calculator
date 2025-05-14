@@ -32,14 +32,6 @@ function App() {
   return (
     <div className="App">
       <div className="header-container">
-        <button 
-          onClick={toggleDarkMode} 
-          className="theme-toggle" 
-          title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-          aria-label={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-        >
-          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
         <a 
           href="https://github.com/justinh-rahb/3d-print-calculator" 
           target="_blank"
@@ -50,6 +42,14 @@ function App() {
         >
           <Github size={20} />
         </a>
+        <button 
+          onClick={toggleDarkMode} 
+          className="theme-toggle" 
+          title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          aria-label={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        >
+          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
       </div>
       <PrintQuoteCalculator darkMode={darkMode} />
     </div>

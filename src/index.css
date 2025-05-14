@@ -156,27 +156,27 @@ body {
 }
 
 .text-gray-500 {
-  color: var(--text-gray-500, #6b7280);
+  color: var(--text-secondary);
 }
 
 .text-gray-600 {
-  color: var(--text-gray-600, #4b5563);
+  color: var(--text-tertiary);
 }
 
 .text-gray-700 {
-  color: var(--text-gray-700, #374151);
+  color: var(--text-color);
 }
 
 .text-gray-800 {
-  color: var(--text-gray-800, #1f2937);
+  color: var(--text-color);
 }
 
 .text-blue-100 {
-  color: var(--text-blue-100, #dbeafe);
+  color: #dbeafe;
 }
 
 .text-blue-600 {
-  color: var(--text-blue-600, #2563eb);
+  color: var(--highlight-color);
 }
 
 .bg-white {
@@ -306,8 +306,8 @@ button:focus {
 /* Styles for input fields */
 input[type="number"] {
   appearance: textfield;
-  background-color: var(--card-bg);
-  color: var(--text-color);
+  background-color: var(--input-bg);
+  color: var(--input-text);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
