@@ -1,5 +1,7 @@
 # 🧮 3D Print Job Quote Calculator
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A sleek, professional web app for creating detailed quotes for 3D printing jobs. Designed to simplify and standardize your quoting process, this tool calculates pricing based on real-world variables—material usage, machine wear, labor costs, and your preferred markup.
 
 ![Screenshot](assets/screenshot.png)
